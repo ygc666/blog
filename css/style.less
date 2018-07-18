@@ -3,42 +3,46 @@
 header,section,footer{
     display: block;
 }
+body{
+    user-select:none;
+}
 header{
     position: fixed;
     width: 100%;
+    height: 80px;
+    z-index: 999;
     // background: pink;
+    // border-bottom: 1px solid #fff;
+    transition: .3s;
     .main{
         position: relative;
         margin: 0 auto;
         width: 1100px;
-        height: 60px;
+        height: 100%;
         // background: yellowgreen;
         display: flex;
         align-items: center;
         .logo{
-            display: block;
-            width: 200px;
-            height: 60px;
-            text-align: center;
-            line-height: 60px;
-            font-size: 38px;
-            text-align:center;
-            background: -webkit-linear-gradient(left, #108dc7 , #ef8e38);     /* 背景色渐变 */
+            margin-left: 50px;
+            font-size: 40px;
+            background: -webkit-linear-gradient(left, #659999,#f4791f);     /* 背景色渐变 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-weight: 200;
         }
         nav{
+            margin-left: 80px;
             a{
+                color: #f2f2f2;
                 margin-left: 30px;
-                color: #999;
-                font-size: 16px;
+                font-size: 14px;
                 padding-bottom: 4px;
                 &:hover{
-                    border-bottom: 1px solid #fff;
+                    border-bottom: 1px solid;
                 }
             }
             .active{
-                border-bottom: 1px solid #fff;
+                border-bottom: 1px solid;
             }
         }
         button{
@@ -48,16 +52,122 @@ header{
             width: 24px;
             height: 24px;
             right: 100px;
-            background: url(../img/head/搜索.svg) no-repeat center center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../img/head/search.svg);
+            background-color: transparent;
             background-size: 24px 24px;
         }
-    } 
+    }
 }
 #body{
     .bigBg{
         width: 100%;
-        height: 600px;
-        background-color: pink;
+        height: 650px;
+        background: url(../img/big.jpg) no-repeat;
+        background-size: 100% 100%;
+        border-top: 1px solid transparent;
+        margin-top: -1px;
+        .main{
+            border-radius: 3px;
+            overflow: hidden;
+            //让 div 居中 总高度 - div 高度 / 2
+            //现在加上 60 就好了
+            //650 - 500 + 60 /2 
+            //现在用 js 算就好了
+            margin-left: auto;
+            margin-right: auto;
+            width: 1100px;
+            height: 500px;
+            .left{
+                position: relative;
+                cursor: pointer;
+                float: left;
+                width: 50%;
+                height: 100%;
+                background: url(../img/essayList/1.jpg) no-repeat center center;
+                a{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 30px;
+                    color: #fff;
+                    h3{
+                        letter-spacing: 4px;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                    p{
+                        color: #BFBFBF;
+                    }
+                }
+                &:hover{
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+            .right{
+                float: right;
+                width: 50%;
+                height: 100%;
+                div{
+                    cursor: pointer;
+                    position: relative;
+                    float: left;
+                    width: 50%;
+                    height: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100% 100%;
+                    &:hover{
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background-color: rgba(0, 0, 0, 0.3);
+                        }
+                    }
+                    &:nth-child(1){
+                        background-image: url(../img/essayList/2.jpg);
+                    }
+                    &:nth-child(2){
+                        background-image: url(../img/essayList/3.jpg);
+                    }
+                    &:nth-child(3){
+                        background-image: url(../img/essayList/4.jpg);
+                    }
+                    &:nth-child(4){
+                        background-image: url(../img/essayList/5.jpg);
+                        
+                    }
+                    a{
+                        position: absolute;
+                        bottom: 15px;
+                        left: 15px;
+                        color: #fff;
+                        user-select:none;
+                        h3{
+                            letter-spacing: 4px;
+                            font-weight: 400;
+                            font-size: 16px;
+                        }
+                        p{
+                            color: #BFBFBF;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

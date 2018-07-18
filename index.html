@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>YGC-BLOG</title>
+	<title>小半</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.3.1.min.js"></script>
 </head>
-<body>
-	<header>
+<body style="height: 1000px;">
+	<header id="header">
 		<div class="main">
-			<a class="logo" title="YGC-BLOG" href="javascript:;">YGC</a>
+			<a class="logo" title="YGC-BLOG" href="javascript:;">Xiaoban</a>
 			<nav>
 				<a class="active" href="javascript:;">首页</a>
 				<a href="javascript:;">好文精选</a>
@@ -20,8 +21,74 @@
 	</header>
 	<section id="body">
 		<div class="bigBg">
-			<div class="main"></div>
+			<div class="main">
+				<div class="left">
+					<a href="javascript:;">
+						<h3>烟火中的尘埃</h3>
+						<br>
+						<p>发布时间：<span>2018/7/8</span> · 评论: <span>6</span> · 喜欢: <span>20</span></p>
+					</a>
+				</div>
+				<div class="right">
+					<div>
+						<a href="javascript:;">
+							<h3>一起去放烟火</h3>
+							<p>发布时间：<span>2018/7/8</span> · 评论: <span>6</span> · 喜欢: <span>20</span></p>
+						</a>
+					</div>
+					<div>
+						<a href="javascript:;">
+							<h3>看海</h3>
+							<p>发布时间：<span>2018/7/8</span> · 评论: <span>6</span> · 喜欢: <span>20</span></p>
+						</a>
+					</div>
+					<div>
+						<a href="javascript:;">
+							<h3>一个人</h3>
+							<p>发布时间：<span>2018/7/8</span> · 评论: <span>6</span> · 喜欢: <span>20</span></p>
+						</a>
+					</div>
+					<div>
+						<a href="javascript:;">
+							<h3>目送城市</h3>
+							<p>发布时间：<span>2018/7/8</span> · 评论: <span>6</span> · 喜欢: <span>20</span></p>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </body>
 </html>
+<script>
+	$(function(){
+		// 让 bigBg 的高度 = 浏览器的高度 最小高度也得 = 650px
+		if($(window).height()<650){
+			$('.bigBg').css('height',650);
+			$('.bigBg > .main').css('margin-top',105);
+		}else{
+			$('.bigBg').css('height',$(window).height());
+			$('.bigBg > .main').css('margin-top',($(window).height()-440)/2);
+		}
+		//滚动条滚动
+		$(window).scroll(function() {
+			if($(document).scrollTop() != 0){
+				$('#header').css({
+					'height':50,
+					'background-color':"#fff",
+					'box-shadow': '0 1px 3px rgba(26,26,26,.5)'
+				});
+				$('#header a').css('color','#000');
+				$('#header button').css('background-image','url("./img/head/search1.svg")');
+			}else{
+				$('#header').css({
+					'height':80,
+					'background-color':"transparent",
+					'box-shadow': 'none'
+				});
+				$('#header a').css('color','#f2f2f2');
+				$('#header button').css('background-image','url("./img/head/search.svg")');
+			}
+		});
+	})
+</script>
