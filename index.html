@@ -16,10 +16,16 @@
 				<a href="javascript:;">作者文章</a>
 				<a href="javascript:;">学习记录</a>
 			</nav>
-			<button></button>
+			<button title="搜索"></button>
 		</div>
 	</header>
 	<section id="body">
+		<div id="searchDiv">
+			<form action="#">
+				<input type="text"><button>搜 索</button>
+			</form>
+			<button class="close"></button>
+		</div>
 		<div class="bigBg">
 			<div class="main">
 				<div class="left">
@@ -62,15 +68,7 @@
 </html>
 <script>
 	$(function(){
-		// 让 bigBg 的高度 = 浏览器的高度 最小高度也得 = 650px
-		if($(window).height()<650){
-			$('.bigBg').css('height',650);
-			$('.bigBg > .main').css('margin-top',105);
-		}else{
-			$('.bigBg').css('height',$(window).height());
-			$('.bigBg > .main').css('margin-top',($(window).height()-440)/2);
-		}
-		//滚动条滚动
+		//滚动条滚动控制 header
 		$(window).scroll(function() {
 			if($(document).scrollTop() != 0){
 				$('#header').css({
@@ -90,5 +88,12 @@
 				$('#header button').css('background-image','url("./img/head/search.svg")');
 			}
 		});
+		//search
+		$('#header button').click(function(){
+			$('#searchDiv').css('top',0);
+		})
+		$('#searchDiv .close').click(function(){
+			$('#searchDiv').css('top',-350);
+		})
 	})
 </script>

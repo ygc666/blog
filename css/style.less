@@ -10,7 +10,7 @@ header{
     position: fixed;
     width: 100%;
     height: 80px;
-    z-index: 999;
+    z-index: 88;
     // background: pink;
     // border-bottom: 1px solid #fff;
     transition: .3s;
@@ -61,9 +61,59 @@ header{
     }
 }
 #body{
+    #searchDiv{
+        transition: .3s;
+        top: -350px;
+        position: fixed;
+        width: 100%;
+        height: 350px;
+        background-color: #fff;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form{
+            input{
+                width: 900px;
+                height: 50px;
+                font-size: 18px;
+                padding-left: 20px;
+                box-sizing: border-box;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 1px solid #ccc;
+                border-right: none;
+            }
+            button{
+                display: inline-block;
+                width: 100px;
+                height: 50px;
+                cursor: pointer;
+                color: #fff;
+                font-size: 14px;
+                background-color: #090909;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+        .close{
+            cursor: pointer;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 100px;
+            top: 40px;
+            background: url(../img/head/close.svg) no-repeat center center;
+            background-size: 30px 30px;
+            transition: .5s;
+            &:hover{
+                transform: rotate(270deg);
+            }
+        }
+    }
     .bigBg{
         width: 100%;
-        height: 650px;
+        height: 670px;
         background: url(../img/big.jpg) no-repeat;
         background-size: 100% 100%;
         border-top: 1px solid transparent;
@@ -73,10 +123,9 @@ header{
             overflow: hidden;
             //让 div 居中 总高度 - div 高度 / 2
             //现在加上 60 就好了
-            //650 - 500 + 60 /2 
+            //670 - 500 + 50 /2 
             //现在用 js 算就好了
-            margin-left: auto;
-            margin-right: auto;
+            margin: 105px auto;
             width: 1100px;
             height: 500px;
             .left{
