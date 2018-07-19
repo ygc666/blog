@@ -23,7 +23,7 @@ header .main {
   align-items: center;
 }
 header .main .logo {
-  margin-left: 50px;
+  margin-left: 40px;
   font-size: 40px;
   background: -webkit-linear-gradient(left, #659999, #f4791f);
   /* 背景色渐变 */
@@ -52,7 +52,7 @@ header .main button {
   display: block;
   width: 24px;
   height: 24px;
-  right: 100px;
+  right: 80px;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/head/search.svg);
@@ -204,4 +204,127 @@ header .main button {
 #body .bigBg .main .right div a p {
   color: #BFBFBF;
   font-size: 12px;
+}
+#body .article .head {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#body .article .head nav a {
+  position: relative;
+  margin-left: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #090909;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 14px;
+}
+#body .article .head nav a:hover::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/arrow.svg) no-repeat center center;
+  background-size: 15px 15px;
+  bottom: -20px;
+  left: calc(50% - 10px);
+}
+#body .article .head nav .active::after {
+  transition: .3s;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/arrow.svg) no-repeat center center;
+  background-size: 15px 15px;
+  bottom: -20px;
+  left: calc(50% - 10px);
+}
+@keyframes transl {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(6px);
+  }
+}
+#body .article .main {
+  margin: 0 auto;
+  width: 1100px;
+  height: auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#body .article .main article {
+  margin: 20px 10px;
+  width: 340px;
+}
+#body .article .main article .image {
+  height: 250px;
+  overflow: hidden;
+}
+#body .article .main article .image img {
+  transition: .5s;
+}
+#body .article .main article .image img:hover {
+  transform: scale(1.1, 1.1);
+}
+#body .article .main article .content h3 {
+  letter-spacing: 4px;
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: 10px;
+}
+#body .article .main article .content h3 a {
+  color: #48494d;
+}
+#body .article .main article .content h3 a:hover {
+  color: #000;
+}
+#body .article .main article .content .hide {
+  text-indent: 2em;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+#body .article .main article .content .hide a {
+  color: #48494d;
+}
+#body .article .main article .content .hide a:hover {
+  color: #000;
+}
+#body .article .main article .content .p {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #999;
+}
+#body .article .main .load {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#body .article .main .load button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  background-color: #242424;
+  color: #fff;
+  letter-spacing: 4px;
+  border-radius: 4px;
+}
+#body .article .main .load button:hover {
+  background-color: #090909;
 }
