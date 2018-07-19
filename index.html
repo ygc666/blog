@@ -19,7 +19,21 @@
 			<button title="搜索"></button>
 		</div>
 	</header>
+	<div id="head">
+		<div id="navBox">
+			<a class="active" href="javascript:;">首页</a>
+			<a href="javascript:;">好文精选</a>
+			<a href="javascript:;">作者文章</a>
+			<a href="javascript:;">学习记录</a>
+		</div>
+		<button></button>
+		<a class="logo" title="YGC-BLOG" href="javascript:;">Xiaoban</a>
+	</div>
 	<section id="body">
+		<div class="searchBtn">
+			<button class="goToTop"></button>
+			<button class="search"></button>
+		</div>
 		<div id="searchDiv">
 			<form action="#">
 				<input type="text"><button>搜 索</button>
@@ -97,6 +111,9 @@
 						</a>
 					</div>
 				</div>
+			</div>
+			<div class="mainMin">
+				
 			</div>
 		</div>
 		<div class="article">
@@ -245,6 +262,7 @@
 				});
 				$('#header a').css('color','#000');
 				$('#header button').css('background-image','url("./img/head/search1.svg")');
+				$('#body .searchBtn .goToTop').css('display','block');
 			}else{
 				$('#header').css({
 					'height':80,
@@ -253,6 +271,7 @@
 				});
 				$('#header a').css('color','#f2f2f2');
 				$('#header button').css('background-image','url("./img/head/search.svg")');
+				$('#body .searchBtn .goToTop').css('display','none');
 			}
 		}
 		$(window).scroll(function() {
@@ -261,9 +280,19 @@
 		//search
 		$('#header button').click(function(){
 			$('#searchDiv').css('top',0);
-		})
+		});
+		$('#body .searchBtn .search').click(function(){
+			$('#searchDiv').css('top',0);
+		});
 		$('#searchDiv .close').click(function(){
 			$('#searchDiv').css('top',-350);
+		});
+		//goToTop
+		$('#body .searchBtn .goToTop').click(function(){
+			$('html, body').animate({
+				scrollTop: 0
+			}); 
+			return false; 
 		})
 	})
 </script>

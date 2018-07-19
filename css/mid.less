@@ -4,10 +4,16 @@ header,section,footer{
 body{
     user-select:none;
 }
+#head{
+    display: none;
+}
+#navBox{
+    display: none;
+}
 header{
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 80px;
     z-index: 88;
     background-color: #fff;
 	box-shadow: 0 1px 3px rgba(26,26,26,.5);
@@ -48,8 +54,82 @@ header{
     }
 }
 #body{
+    .searchBtn{
+        box-shadow: 0 1px 3px rgba(26,26,26,.5);
+        .goToTop{
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            position: fixed;
+            right: 0;
+            top: calc(~"50% - 54px");
+            background: url(../img/goToTop.svg) no-repeat center center #fff;
+            background-size: 16px 16px;
+            border-bottom: 1px solid #f1f1f1;
+            display: none;
+        }
+        .search{
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            position: fixed;
+            right: 0;
+            top: calc(~"50% - 18px");
+            background: url(../img/head/search1.svg) no-repeat center center #fff;
+            background-size: 16px 16px;
+        }
+        z-index: 888;
+    }
     #searchDiv{
-        display: none;
+        transition: .3s;
+        top: -350px;
+        position: fixed;
+        width: 100%;
+        height: 350px;
+        background-color: #fff;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form{
+            display: flex;
+            input{
+                width: 600px;
+                height: 50px;
+                font-size: 18px;
+                padding-left: 20px;
+                box-sizing: border-box;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 1px solid #ccc;
+                border-right: none;
+            }
+            button{
+                display: inline-block;
+                width: 100px;
+                height: 50px;
+                cursor: pointer;
+                color: #fff;
+                font-size: 14px;
+                background-color: #090909;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+        .close{
+            cursor: pointer;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 100px;
+            top: 40px;
+            background: url(../img/head/close.svg) no-repeat center center;
+            background-size: 30px 30px;
+            transition: .5s;
+            &:hover{
+                transform: rotate(270deg);
+            }
+        }
     }
     .bigBg{
         width: 100%;
@@ -59,6 +139,9 @@ header{
         border-top: 1px solid transparent;
         margin-top: -1px;
         .mainMax{
+            display: none;
+        }
+        .mainMin{
             display: none;
         }
         .mainMid{
@@ -87,12 +170,12 @@ header{
                     a{
                         position: absolute;
                         bottom: 10px;
-                        left: 10px;
+                        left: 1 0px;
                         color: #fff;
                         user-select:none;
                         h3{
                             letter-spacing: 4px;
-                            font-weight: 400;
+                            font-weight: 500;
                             font-size: 16px;
                         }
                         p{

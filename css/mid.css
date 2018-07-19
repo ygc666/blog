@@ -6,10 +6,16 @@ footer {
 body {
   user-select: none;
 }
+#head {
+  display: none;
+}
+#navBox {
+  display: none;
+}
 header {
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 80px;
   z-index: 88;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(26, 26, 26, 0.5);
@@ -47,8 +53,82 @@ header .main nav .active {
 header .main button {
   display: none;
 }
-#body #searchDiv {
+#body .searchBtn {
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.5);
+  z-index: 888;
+}
+#body .searchBtn .goToTop {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  right: 0;
+  top: calc(50% - 54px);
+  background: url(../img/goToTop.svg) no-repeat center center #fff;
+  background-size: 16px 16px;
+  border-bottom: 1px solid #f1f1f1;
   display: none;
+}
+#body .searchBtn .search {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  right: 0;
+  top: calc(50% - 18px);
+  background: url(../img/head/search1.svg) no-repeat center center #fff;
+  background-size: 16px 16px;
+}
+#body #searchDiv {
+  transition: .3s;
+  top: -350px;
+  position: fixed;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#body #searchDiv form {
+  display: flex;
+}
+#body #searchDiv form input {
+  width: 600px;
+  height: 50px;
+  font-size: 18px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+#body #searchDiv form button {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  background-color: #090909;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#body #searchDiv .close {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 100px;
+  top: 40px;
+  background: url(../img/head/close.svg) no-repeat center center;
+  background-size: 30px 30px;
+  transition: .5s;
+}
+#body #searchDiv .close:hover {
+  transform: rotate(270deg);
 }
 #body .bigBg {
   width: 100%;
@@ -59,6 +139,9 @@ header .main button {
   margin-top: -1px;
 }
 #body .bigBg .mainMax {
+  display: none;
+}
+#body .bigBg .mainMin {
   display: none;
 }
 #body .bigBg .mainMid {
@@ -90,13 +173,13 @@ header .main button {
 #body .bigBg .mainMid .top div a {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 1 0px;
   color: #fff;
   user-select: none;
 }
 #body .bigBg .mainMid .top div a h3 {
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 }
 #body .bigBg .mainMid .top div a p {

@@ -7,6 +7,12 @@ body {
   user-select: none;
   background-color: #fff;
 }
+#head {
+  display: none;
+}
+#navBox {
+  display: none;
+}
 header {
   position: fixed;
   width: 100%;
@@ -58,6 +64,9 @@ header .main button {
   background-image: url(../img/head/search.svg);
   background-color: transparent;
   background-size: 20px 20px;
+}
+#body .searchBtn {
+  display: none;
 }
 #body #searchDiv {
   transition: .3s;
@@ -116,6 +125,9 @@ header .main button {
   margin-top: -1px;
 }
 #body .bigBg .mainMid {
+  display: none;
+}
+#body .bigBg .mainMin {
   display: none;
 }
 #body .bigBg .mainMax {

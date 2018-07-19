@@ -5,6 +5,12 @@ body{
     user-select:none;
     background-color: #fff;
 }
+#head{
+    display: none;
+}
+#navBox{
+    display: none;
+}
 header{
     position: fixed;
     width: 100%;
@@ -60,6 +66,9 @@ header{
     }
 }
 #body{
+    .searchBtn{
+        display: none;
+    }
     #searchDiv{
         transition: .3s;
         top: -350px;
@@ -109,7 +118,6 @@ header{
                 transform: rotate(270deg);
             }
         }
-
     }
     .bigBg{
         width: 100%;
@@ -119,6 +127,9 @@ header{
         border-top: 1px solid transparent;
         margin-top: -1px;
         .mainMid{
+            display: none;
+        }
+        .mainMin{
             display: none;
         }
         .mainMax{
