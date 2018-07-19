@@ -1,0 +1,106 @@
+header,section,footer{
+    display: block;
+}
+body{
+    user-select:none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 88;
+    background-color: #fff;
+	box-shadow: 0 1px 3px rgba(26,26,26,.5);
+    transition: .3s;
+    .main{
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        // background: yellowgreen;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            font-size: 40px;
+            background: -webkit-linear-gradient(left, #659999,#f4791f);     /* 背景色渐变 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 200;
+        }
+        nav{
+            a{
+                color: #000;
+                margin-left: 30px;
+                font-size: 14px;
+                padding-bottom: 4px;
+                &:hover{
+                    border-bottom: 1px solid;
+                }
+            }
+            .active{
+                border-bottom: 1px solid;
+            }
+        }
+        button{
+            display: none;
+        }
+    }
+}
+#body{
+    #searchDiv{
+        display: none;
+    }
+    .bigBg{
+        width: 100%;
+        height: 670px;
+        background: url(../img/big.jpg) no-repeat;
+        background-size: 100% 100%;
+        border-top: 1px solid transparent;
+        margin-top: -1px;
+        .mainMax{
+            display: none;
+        }
+        .mainMid{
+            margin: 105px auto;
+            width: 90%;
+            height: 500px;
+            background: pink;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            div{
+                position: relative;
+                width: 50%;
+                height: 50%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                a{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    color: #fff;
+                    h3{
+                        letter-spacing: 4px;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                    p{
+                        color: #BFBFBF;
+                    }
+                }
+                &:hover{
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
