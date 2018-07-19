@@ -286,3 +286,30 @@ header .main button {
 #body .article .main .load button:hover {
   background-color: #090909;
 }
+footer {
+  border-top: 1px solid #f1f1f1;
+  width: 100%;
+  height: 50px;
+}
+footer div {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 50px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+footer div a {
+  color: #999;
+}
+footer div a:hover {
+  color: #3274ff;
+}
+footer div p {
+  color: #999;
+  float: left;
+}
+footer div span {
+  float: right;
+}
