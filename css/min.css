@@ -5,7 +5,6 @@ footer {
 }
 body {
   user-select: none;
-  min-width: 500px;
 }
 header {
   display: none;
@@ -90,8 +89,7 @@ header {
   position: relative;
   width: 100%;
   height: 500px;
-  background: url(../img/essayList/1.jpg) no-repeat center center;
-  background-size: 100% auto;
+  background: url(../img/essayList/1.jpg) repeat-x center center;
 }
 #body .bigBg .mainMin a {
   position: absolute;
@@ -127,6 +125,12 @@ header {
 #body .article .head a:last-child::after {
   content: "";
 }
+#body .article .head a:hover {
+  color: #000;
+}
+#body .article .head .active {
+  color: #000;
+}
 #body .article .main {
   margin: 0 auto;
   width: 100%;
@@ -149,7 +153,8 @@ header {
   min-height: 140px;
   transition: .5s;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
 }
 #body .article .main article .image img:hover {
   transform: scale(1.1, 1.1);
