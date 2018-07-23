@@ -143,7 +143,9 @@ header .main button {
   float: left;
   width: 50%;
   height: 100%;
-  background: url(../img/essayList/1.jpg) no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/essayList/1.jpg);
 }
 #body .bigBg .mainMax .left a {
   position: absolute;
@@ -193,16 +195,16 @@ header .main button {
   background-color: rgba(0, 0, 0, 0.3);
 }
 #body .bigBg .mainMax .right div:nth-child(1) {
-  background-image: url(../img/essayList/2.jpg);
+  background-image: url(../img/essayList/3.jpg);
 }
 #body .bigBg .mainMax .right div:nth-child(2) {
   background-image: url(../img/essayList/3.jpg);
 }
 #body .bigBg .mainMax .right div:nth-child(3) {
-  background-image: url(../img/essayList/4.jpg);
+  background-image: url(../img/essayList/3.jpg);
 }
 #body .bigBg .mainMax .right div:nth-child(4) {
-  background-image: url(../img/essayList/5.jpg);
+  background-image: url(../img/essayList/3.jpg);
 }
 #body .bigBg .mainMax .right div a {
   position: absolute;

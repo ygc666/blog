@@ -53,6 +53,6 @@ $(function(){
     $('#head #navBox > button').click(function(){
         $('#head #navBox').css('left',"-100%");
     });
-
+    
     
 });
